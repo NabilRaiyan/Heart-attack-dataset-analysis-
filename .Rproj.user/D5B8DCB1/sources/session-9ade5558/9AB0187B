@@ -1,0 +1,27 @@
+{
+    "id": "9AB0187B",
+    "path": "E:/Courses/AIUB Courses/9th Semester/Introduction to data science/Midterm/Midterm Project/Heart Attack Data set analysis/hear_attack_data_set.R",
+    "project_path": "hear_attack_data_set.R",
+    "type": "r_source",
+    "hash": "453040007",
+    "contents": "",
+    "dirty": false,
+    "created": 1698927236086.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "2,15",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1698927698,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1698927698128,
+    "read_only": false,
+    "read_only_alternatives": []
+}
