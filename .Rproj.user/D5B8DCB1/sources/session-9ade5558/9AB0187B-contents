@@ -8,13 +8,14 @@ summary(heart_attack_ds)
 str(heart_attack_ds)
 dim(heart_attack_ds)
 
+# Finding missing values
 colSums(is.na(heart_attack_ds))
 
-
+#Recovering missing values using mean
 mean_age <- mean(heart_attack_ds$Age, na.rm = TRUE)
 heart_attack_ds$Age[is.na(heart_attack_ds$Age)] <- mean_age
 
-
+#Recovering missing values using median
 median_age <- median(heart_attack_ds$Age, na.rm = TRUE)
 heart_attack_ds$Age[is.na(heart_attack_ds$Age)] <- median_age
 
