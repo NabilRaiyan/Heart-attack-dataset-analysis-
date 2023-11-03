@@ -24,12 +24,10 @@ heart_attack_ds$Age[is.na(heart_attack_ds$Age)] <- median_age
 
 
 #---------------------------
-# Install and load the 'dplyr' package if you haven't already
-# install.packages("dplyr")
 library(dplyr)
 
-# Data value transformation
-# Assuming 'heart_data' is your dataset
+# Data value transformation in Sex attribute
+# Assuming 'heart_data' is your data set
 heart_attack_ds <- heart_attack_ds %>%
   mutate(Sex = recode(Sex, "M" = 1, "F" = 0))
 heart_attack_ds
@@ -39,7 +37,7 @@ heart_attack_ds
   
 # Calculate the mode of the "Sex" variable
 mode_sex <- as.character(which.max(table(heart_attack_ds$Sex)))
-
+mode_sex
 # Impute missing "Sex" values with the mode
 heart_attack_ds$Sex[is.na(heart_attack_ds$Sex)] <- mode_sex
 heart_attack_ds
