@@ -9,4 +9,13 @@ str(heart_attack_ds)
 
 dim(heart_attack_ds)
 
+names(heart_attack_ds)
 
+for (name in names(heart_attack_ds))
+{
+  missing_value <- is.na(name)
+}
+
+missing_values
+  
+  
