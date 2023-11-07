@@ -12,3 +12,4 @@ names(heart_attack_ds)
 
 
 is.na(heart_attack_ds)
+colSums(is.na(heart_attack_ds))
