@@ -39,7 +39,21 @@ na.omit(heart_attack_ds)
 age_outliers <- boxplot(heart_attack_ds$Age)$out
 cat("Potential Outliers in Age:", outliers, "\n")
 outliers_rows <- heart_attack_ds$Age > 120
-heart_attack_ds <- heart_attack_ds[ ! outliers_rows, ]
+heart_attack_ds <- heart_attack_ds[!outliers_rows, ]
 heart_attack_ds
+
+
+
+
+heart_attack_ds$Sex <- ifelse(heart_attack_ds$Sex == "M", 1, ifelse(heart_attack_ds$Sex == "F", 0, NA))
+
+
+
+sex_column_missing_value_count <- sum(is.na(heart_attack_ds$Sex))
+cat("Total missing values in the 'Sex' column:", sex_column_missing_value_count, "\n")
+
+
+
+
 
 
