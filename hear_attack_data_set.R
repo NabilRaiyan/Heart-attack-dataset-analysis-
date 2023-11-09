@@ -32,3 +32,14 @@ mean_age <- mean(heart_attack_ds$Age, na.rm = TRUE)
 heart_attack_ds$Age[is.na(heart_attack_ds$Age)] <- mean_age
 
 
+
+na.omit(heart_attack_ds)
+
+
+age_outliers <- boxplot(heart_attack_ds$Age)$out
+cat("Potential Outliers in Age:", outliers, "\n")
+outliers_rows <- heart_attack_ds$Age > 120
+heart_attack_ds <- heart_attack_ds[ ! outliers_rows, ]
+heart_attack_ds
+
+
