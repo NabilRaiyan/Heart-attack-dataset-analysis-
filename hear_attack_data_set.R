@@ -61,12 +61,16 @@ heart_attack_ds$Sex <- ifelse(heart_attack_ds$Sex == 1, "M", ifelse(heart_attack
 
 
 
+boxplot(heart_attack_ds$RestingBP, main="Resting BP Plot", ylab="RestingBP")
+outliers_rows_RestingBp <- boxplot(heart_attack_ds$RestingBP)$out
+cat("Potentials outliers in Resting BP column: ", outliers_rows_RestingBp, "\n")
 
 
+restingBP_outliers_rows_num <- which(heart_attack_ds$RestingBP > 170 | heart_attack_ds$RestingBP < 1)
+cat("Outliers rows numbers are: ", restingBP_outliers_rows_num, "\n")
 
 
-
-
+heart_attack_ds <- heart_attack_ds[-c(5, 110, 124), ]
 
 
 
