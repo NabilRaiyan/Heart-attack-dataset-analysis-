@@ -73,9 +73,13 @@ heart_attack_ds <- heart_attack_ds[-c(5, 110, 124), ]
 
 
 median_restingBP <- median(heart_attack_ds$RestingBP)
+mean_restingBP <- round(mean(heart_attack_ds$RestingBP), digits = 0)
+mode_restingBP = as.numeric(names(sort(table(heart_attack_ds$RestingBP), decreasing = TRUE)[1]))
 for (i in 1:125){
   if (heart_attack_ds$RestingBP[i] > 170 | heart_attack_ds$RestingBP[i] < 1){
-    heart_attack_ds$RestingBP[i] = median_restingBP
+    heart_attack_ds$RestingBP[i] = mode_restingBP
   }
 }
+
+summary(heart_attack_ds$RestingBP)
 
