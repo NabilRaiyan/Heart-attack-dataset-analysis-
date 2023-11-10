@@ -40,7 +40,7 @@ age_outliers_rows
 
 for (i in 1:150){
   if (heart_attack_ds$Age[i] > 120){
-    heart_attack_ds$Age[i] = mode_age
+    heart_attack_ds$Age[i] = median_age
   }
 }
 
