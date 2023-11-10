@@ -148,7 +148,14 @@ barplot(table(heart_attack_ds$RestingBP), main = "Bar Plot of Resting BP", xlab 
 hist(heart_attack_ds$RestingBP, main = "Histogram of Resting BP", xlab = "Resting BP", col = "lightblue", border = "black")
 
 
+hist(heart_attack_ds$Cholesterol, main = "Histogram of Cholesterol", xlab = "Cholesterol", col = "lightblue", border = "black")
 
+
+
+hist(heart_attack_ds$RestingBP, main = "Histogram of MaxHR", xlab = "MaxHR", col = "lightblue", border = "black")
+
+
+barplot(table(heart_attack_ds$HeartDisease), main = "Bar Plot of Heart Disease", xlab = "HeartDisease", col = "lightblue")
 
 
 
