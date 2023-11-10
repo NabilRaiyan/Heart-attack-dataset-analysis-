@@ -46,12 +46,15 @@ heart_attack_ds
 
 
 heart_attack_ds$Sex <- ifelse(heart_attack_ds$Sex == "M", 1, ifelse(heart_attack_ds$Sex == "F", 0, NA))
-
-
-
 sex_column_missing_value_count <- sum(is.na(heart_attack_ds$Sex))
 cat("Total missing values in the 'Sex' column:", sex_column_missing_value_count, "\n")
 
+
+missing_rows <- which(is.na(heart_attack_ds$Sex))
+cat("Row numbers with missing values in the 'Sex' column:", paste(missing_rows, collapse = ", "), "\n")
+
+median_sex <- median(heart_attack_ds$Sex, na.rm = TRUE)
+heart_attack_ds$Sex[is.na(heart_attack_ds$Sex)] <- median_sex
 
 
 
