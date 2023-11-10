@@ -123,11 +123,58 @@ median_exercise_angina <- median(heart_attack_ds$ExerciseAngina, na.rm = TRUE)
 median_exercise_angina
 
 
-
 mode_exercise_angina <- as.numeric(names(sort(table(heart_attack_ds$ExerciseAngina), decreasing = TRUE)[1]))
 mode_exercise_angina
 heart_attack_ds$ExerciseAngina[is.na(heart_attack_ds$ExerciseAngina)] <- mode_exercise_angina
 
 heart_attack_ds$ExerciseAngina <- ifelse(heart_attack_ds$ExerciseAngina == 1, "Y", ifelse(heart_attack_ds$ExerciseAngina == 0, "N", NA))
+
+
+
+
+
+
+barplot(height = heart_attack_ds$Age, names.arg = 1:nrow(heart_attack_ds), col = "blue", main = "Bar Plot for Age", xlab = "Instance", ylab = "Age")
+hist(heart_attack_ds$Age, main = "Histogram of Age", xlab = "Age", col = "lightblue", border = "black")
+
+
+barplot(table(heart_attack_ds$Sex), main = "Bar Plot of Sex", xlab = "Sex", col = "lightblue")
+hist(heart_attack_ds$Sex, main = "Histogram of Sex", xlab = "Sex", col = "lightblue", border = "black")
+
+barplot(table(heart_attack_ds$ChestPainType), main = "Bar Plot of Chest Pain Type", xlab = "Chest Pain Type", ylab = "Frequency",col = "lightblue")
+
+
+barplot(table(heart_attack_ds$RestingBP), main = "Bar Plot of Resting BP", xlab = "Resting BP", col = "lightblue")
+hist(heart_attack_ds$RestingBP, main = "Histogram of Resting BP", xlab = "Resting BP", col = "lightblue", border = "black")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
