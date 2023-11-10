@@ -81,5 +81,29 @@ for (i in 1:125){
   }
 }
 
-summary(heart_attack_ds$RestingBP)
+
+
+
+boxplot(heart_attack_ds$Cholesterol, main="Cholesterol Plot", ylab="Cholesterol")
+outliers_rows_cholesterol <- boxplot(heart_attack_ds$Cholesterol)$out
+cat("Outliers in Cholesterol Column: ", outliers_rows_cholesterol, "\n")
+cholesterol_outliers_row_num <- which(heart_attack_ds$Cholesterol > 380 | heart_attack_ds$Cholesterol < 100)
+cat("Rows of potential outliers in Cholesterol Column: ", cholesterol_outliers_row_num, "\n")
+
+heart_attack_ds <- heart_attack_ds[-c(11, 12, 29, 31, 70, 77, 99, 103, 104, 124, 133, 150), ]
+dim(heart_attack_ds)
+
+median_cholesterol <- median(heart_attack_ds$Cholesterol)
+
+mode_cholesterol <- as.numeric(names(sort(table(heart_attack_ds$Cholesterol), decreasing = TRUE)[1]))
+mode_cholesterol
+for(i in 1:150){
+  if (heart_attack_ds$Cholesterol[i] > 360 | heart_attack_ds$Cholesterol[i] <= 100){
+    heart_attack_ds$Cholesterol[i] = mode_cholesterol
+  }
+}
+
+
+
+
 
