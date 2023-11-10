@@ -134,7 +134,7 @@ heart_attack_ds$ExerciseAngina <- ifelse(heart_attack_ds$ExerciseAngina == 1, "Y
 
 
 
-barplot(height = heart_attack_ds$Age, names.arg = 1:nrow(heart_attack_ds), col = "blue", main = "Bar Plot for Age", xlab = "Instance", ylab = "Age")
+barplot_age <- barplot(table(heart_attack_ds$Age), main = "Barplot for Age", xlab = "Age", col = "lightgreen", border = "black")
 hist(heart_attack_ds$Age, main = "Histogram of Age", xlab = "Age", col = "lightblue", border = "black")
 
 
@@ -158,6 +158,15 @@ hist(heart_attack_ds$RestingBP, main = "Histogram of MaxHR", xlab = "MaxHR", col
 barplot(table(heart_attack_ds$HeartDisease), main = "Bar Plot of Heart Disease", xlab = "HeartDisease", col = "lightblue")
 
 
+
+
+variance_age <- var(heart_attack_ds$Age)
+std_dev_age <- sd(heart_attack_ds$Age)
+range_age <- range(heart_attack_ds$Age)
+
+cat("Variance:", variance_age, "\n")
+cat("Standard Deviation:", std_dev_age, "\n")
+cat("Range:", paste(range_age, collapse = " to "), "\n")
 
 
 
