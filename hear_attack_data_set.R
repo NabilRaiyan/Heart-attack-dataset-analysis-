@@ -131,7 +131,49 @@ heart_attack_ds$ExerciseAngina <- ifelse(heart_attack_ds$ExerciseAngina == 1, "Y
 
 
 
+variance_age <- var(heart_attack_ds$Age)
+std_dev_age <- sd(heart_attack_ds$Age)
+range_age <- range(heart_attack_ds$Age)
 
+cat("Variance:", variance_age, "\n")
+cat("Standard Deviation:", std_dev_age, "\n")
+cat("Range:", paste(range_age, collapse = " to "), "\n")
+
+
+variance_resting_bp <- var(heart_attack_ds$RestingBP)
+std_dev_resting_bp <- sd(heart_attack_ds$RestingBP)
+range_resting_bp <- range(heart_attack_ds$RestingBP)
+
+# Display the calculated measures of spread
+cat("Variance:", variance_resting_bp, "\n")
+cat("Standard Deviation:", std_dev_resting_bp, "\n")
+cat("Range:", paste(range_resting_bp, collapse = " to "), "\n")
+
+
+
+variance_cholesterol <- var(heart_attack_ds$Cholesterol)
+std_dev_cholesterol <- sd(heart_attack_ds$Cholesterol)
+range_cholesterol <- range(heart_attack_ds$Cholesterol)
+
+# Display the calculated measures of spread
+cat("Variance:", variance_cholesterol, "\n")
+cat("Standard Deviation:", std_dev_cholesterol, "\n")
+cat("Range:", paste(range_cholesterol, collapse = " to "), "\n")
+
+
+
+variance_maxhr <- var(heart_attack_ds$MaxHR)
+std_dev_maxhr <- sd(heart_attack_ds$MaxHR)
+range_maxhr <- range(heart_attack_ds$MaxHR)
+
+
+cat("Variance (MaxHR):", variance_maxhr, "\n")
+cat("Standard Deviation (MaxHR):", std_dev_maxhr, "\n")
+cat("Range (MaxHR):", paste(range_maxhr, collapse = " to "), "\n")
+
+
+
+library(ggplot2)
 
 
 barplot_age <- barplot(table(heart_attack_ds$Age), main = "Barplot for Age", xlab = "Age", col = "lightgreen", border = "black")
@@ -152,45 +194,14 @@ hist(heart_attack_ds$Cholesterol, main = "Histogram of Cholesterol", xlab = "Cho
 
 
 
-hist(heart_attack_ds$RestingBP, main = "Histogram of MaxHR", xlab = "MaxHR", col = "lightblue", border = "black")
+ggplot(heart_attack_ds, aes(x = MaxHR)) +
+  geom_histogram(binwidth = 5, fill = "blue", color = "white", alpha = 0.7) +
+  labs(x = "MaxHR", y = "Frequency") +
+  ggtitle("Histogram for MaxHR Column")
+
 
 
 barplot(table(heart_attack_ds$HeartDisease), main = "Bar Plot of Heart Disease", xlab = "HeartDisease", col = "lightblue")
-
-
-
-
-variance_age <- var(heart_attack_ds$Age)
-std_dev_age <- sd(heart_attack_ds$Age)
-range_age <- range(heart_attack_ds$Age)
-
-cat("Variance:", variance_age, "\n")
-cat("Standard Deviation:", std_dev_age, "\n")
-cat("Range:", paste(range_age, collapse = " to "), "\n")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
