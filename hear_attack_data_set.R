@@ -48,13 +48,14 @@ cat("Total missing values in the 'Sex' column:", sex_column_missing_value_count,
 
 missing_rows <- which(is.na(heart_attack_ds$Sex))
 cat("Row numbers with missing values in the 'Sex' column:", paste(missing_rows, collapse = ", "), "\n")
-median_sex <- median(heart_attack_ds$Sex, na.rm = TRUE)
 
+median_sex <- median(heart_attack_ds$Sex, na.rm = TRUE)
 heart_attack_ds$Sex[is.na(heart_attack_ds$Sex)] <- median_sex
+
 mode_sex <- as.numeric(names(sort(table(heart_attack_ds$Sex), decreasing = TRUE)[1]))
 cat("Mode of Sex:", mode_sex, "\n")
-
 heart_attack_ds$Sex[is.na(heart_attack_ds$Sex)] <- mode_sex
+
 heart_attack_ds <- na.omit(heart_attack_ds)
 dim(heart_attack_ds)
 heart_attack_ds$Sex <- ifelse(heart_attack_ds$Sex == 1, "M", ifelse(heart_attack_ds$Sex == 0, "F", NA))
@@ -68,10 +69,13 @@ cat("Potentials outliers in Resting BP column: ", outliers_rows_RestingBp, "\n")
 
 restingBP_outliers_rows_num <- which(heart_attack_ds$RestingBP > 170 | heart_attack_ds$RestingBP < 1)
 cat("Outliers rows numbers are: ", restingBP_outliers_rows_num, "\n")
-
-
 heart_attack_ds <- heart_attack_ds[-c(5, 110, 124), ]
 
 
-
+median_restingBP <- median(heart_attack_ds$RestingBP)
+for (i in 1:125){
+  if (heart_attack_ds$RestingBP[i] > 170 | heart_attack_ds$RestingBP[i] < 1){
+    heart_attack_ds$RestingBP[i] = median_restingBP
+  }
+}
 
