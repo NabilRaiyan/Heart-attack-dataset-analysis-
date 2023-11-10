@@ -105,5 +105,14 @@ for(i in 1:150){
 
 
 
+heart_attack_ds$ExerciseAngina <- ifelse(heart_attack_ds$ExerciseAngina == 'Y', 1, ifelse(heart_attack_ds$ExerciseAngina == 'N', 0, NA))
 
+colSums(is.na(heart_attack_ds))
+missing_value_rows_num_exercise_angina <- which(is.na(heart_attack_ds$ExerciseAngina))
+cat("Missing value rows numbers: ", missing_value_rows_num_exercise_angina, "\n")
 
+  
+heart_attack_ds <- heart_attack_ds[-c(7, 27), ]
+  
+
+  
