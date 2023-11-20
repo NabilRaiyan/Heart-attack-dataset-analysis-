@@ -22,7 +22,7 @@ This project aims to predict heart disease based on a dataset with 12 attributes
 
 <h1>Instructions for Use</h1>
 <h3>Clone the Repository:</h3>
-<p>git clone: href=https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-.git</p>
+<p>git clone:https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-.git</p>
 
 <h1>Explore the Dataset</h1>
 <p>Open the dataset using your preferred data analysis tools, such as Jupyter Notebook, RStudio, or any other environment.</p>
