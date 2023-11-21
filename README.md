@@ -1,6 +1,6 @@
 # Heart Disease Prediction Project
 <h1>Overview</h1>
-This project aims to implement data preparation steps and perform univariate data exploration on a dataset with 12 features and 150 instances. The attributes include Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS, RestingECG, MaxHR, ExerciseAngina, Oldpeak, ST_Slope, and HeartDisease. The dataset provides insights into the heart condition and allows the prediction of heart disease based on age, gender, and other factors.
+This project aims to implement data preparation steps and perform univariate data exploration on a dataset with 12 attributes and 150 instances. The attributes include Age, Sex, ChestPainType, RestingBP, Cholesterol, FastingBS, RestingECG, MaxHR, ExerciseAngina, Oldpeak, ST_Slope, and HeartDisease. The dataset provides insights into the heart condition and allows the prediction of heart disease based on age, gender, and other factors.
 
 <h1>Dataset Information</h1>
 <h3>1. Age: Age of the individual.</h3>
