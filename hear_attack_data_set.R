@@ -174,17 +174,14 @@ cat("Range (MaxHR):", paste(range_maxhr, collapse = " to "), "\n")
 library(ggplot2)
 
 
-barplot_age <- barplot(table(heart_attack_ds$Age), main = "Barplot for Age", xlab = "Age", col = "lightgreen", border = "black")
 hist(heart_attack_ds$Age, main = "Histogram of Age", xlab = "Age", col = "lightblue", border = "black")
 
 
 barplot(table(heart_attack_ds$Sex), main = "Bar Plot of Sex", xlab = "Sex", col = "lightblue")
-hist(heart_attack_ds$Sex, main = "Histogram of Sex", xlab = "Sex", col = "lightblue", border = "black")
 
 barplot(table(heart_attack_ds$ChestPainType), main = "Bar Plot of Chest Pain Type", xlab = "Chest Pain Type", ylab = "Frequency",col = "lightblue")
 
 
-barplot(table(heart_attack_ds$RestingBP), main = "Bar Plot of Resting BP", xlab = "Resting BP", col = "lightblue")
 hist(heart_attack_ds$RestingBP, main = "Histogram of Resting BP", xlab = "Resting BP", col = "lightblue", border = "black")
 
 
