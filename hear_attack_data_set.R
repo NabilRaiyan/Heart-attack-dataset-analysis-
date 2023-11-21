@@ -1,6 +1,6 @@
 options(max.print = .Machine$integer.max)
 
-heart_attack_ds <- read.csv("E:/Courses/AIUB Courses/9th Semester/Introduction to data science/Midterm/Midterm Project/heart_attack_ds.csv")
+heart_attack_ds <- read.csv("E:/Courses/AIUB Courses/9th Semester/Introduction to data science/Midterm/Midterm Project/Midterm Project heart attack data set analysis(Group-08)/heart_attack_ds.csv")
 heart_attack_ds
 head(heart_attack_ds)
 tail(heart_attack_ds)
@@ -144,7 +144,6 @@ variance_resting_bp <- var(heart_attack_ds$RestingBP)
 std_dev_resting_bp <- sd(heart_attack_ds$RestingBP)
 range_resting_bp <- range(heart_attack_ds$RestingBP)
 
-# Display the calculated measures of spread
 cat("Variance:", variance_resting_bp, "\n")
 cat("Standard Deviation:", std_dev_resting_bp, "\n")
 cat("Range:", paste(range_resting_bp, collapse = " to "), "\n")
@@ -155,7 +154,6 @@ variance_cholesterol <- var(heart_attack_ds$Cholesterol)
 std_dev_cholesterol <- sd(heart_attack_ds$Cholesterol)
 range_cholesterol <- range(heart_attack_ds$Cholesterol)
 
-# Display the calculated measures of spread
 cat("Variance:", variance_cholesterol, "\n")
 cat("Standard Deviation:", std_dev_cholesterol, "\n")
 cat("Range:", paste(range_cholesterol, collapse = " to "), "\n")
