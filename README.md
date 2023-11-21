@@ -28,3 +28,10 @@ This project aims to implement data preparation steps and perform univariate dat
 <p>Open the dataset using your preferred data analysis tools, such as Jupyter Notebook, RStudio, or any other environment.</p>
 
 
+![ss1](https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-/assets/31074461/bd61b31f-bfb8-4b0b-95bd-b6e3be395d81)
+
+![ss2](https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-/assets/31074461/180e71a2-3da8-446a-974c-a5e9c16cb4a0)
+![ss3](https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-/assets/31074461/482c7fca-d56c-48b6-bc87-5c007e9c8419)
+![ss6](https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-/assets/31074461/d7dfc28a-72fb-471a-b9db-435b12e1303d)
+![ss5](https://github.com/NabilRaiyan/Heart-attack-dataset-analysis-/assets/31074461/b0e9c004-f987-4965-9bb6-0a9eb41de357)
+
